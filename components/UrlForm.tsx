@@ -6,6 +6,7 @@ import React from "react";
 import appLogo from "@/public/assets/logoApp.png";
 
 const UrlForm = () => {
+  //hooks
   const { url, shortUrl, error, setUrl, shortenUrl } = useUrlShortener();
 
   const handleSubmit = (e: React.FormEvent) => {
