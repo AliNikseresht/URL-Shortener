@@ -4,7 +4,9 @@ import { useUrlShortener } from "@/hooks/useUrlShortener";
 import Image from "next/image";
 import React from "react";
 import cubeOne from "@/public/assets/cubes/cube1.svg";
+import cubeTwo from "@/public/assets/cubes/cube2.svg";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
+import Button from "./Button";
 
 const UrlForm = () => {
   //hooks
@@ -16,15 +18,15 @@ const UrlForm = () => {
   };
 
   return (
-    <div className="flex justify-center min-h-screen">
+    <div className="flex justify-center min-h-screen relative">
       <Image
         src={cubeOne}
-        alt="app logo"
-        width={1000}
-        height={1000}
+        alt="cube photo"
+        width={800}
+        height={800}
         priority
         style={{ zIndex: "-1" }}
-        className="absolute"
+        className="absolute right-0"
       />
 
       <div className="p-6 rounded-lg z-20 flex flex-col items-center">
@@ -49,12 +51,11 @@ const UrlForm = () => {
             className="w-full p-4 outline-none"
             required
           />
-          <button
+          <Button
             type="submit"
-            className="w-40 mr-1 py-3 bg-[#144EE3] text-white rounded-4xl hover:bg-[#144fe3b9] cursor-pointer duration-300"
-          >
-            Shorten Now!
-          </button>
+            text="Shorten Now!"
+            className="w-48 mr-1 py-3 bg-[#144EE3] text-white rounded-4xl hover:bg-[#144fe3b9] cursor-pointer duration-300"
+          />
         </form>
         <div className="flex items-center gap-1 mt-4">
           <span className="text-xs text-[#C9CED6]">
@@ -80,6 +81,15 @@ const UrlForm = () => {
           </div>
         )}
       </div>
+      <Image
+        src={cubeTwo}
+        alt="cube photo"
+        width={800}
+        height={800}
+        priority
+        style={{ zIndex: "-1" }}
+        className="absolute left-0 rotate-180"
+      />
     </div>
   );
 };
