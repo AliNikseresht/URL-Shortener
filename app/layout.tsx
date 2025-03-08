@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "Create shortened URLs quickly and easily with this URL Shortener. It's completely free for everyone to use.",
   keywords:
-    "URL Shortener, URL shortening, fast URL shortening, free URL shortener",
+    "url shortener free, url shortener ,URL Shortener, URL shortening, fast URL shortening, free URL shortener",
   authors: [
     {
       name: "Ali Nikseresht",
@@ -51,6 +52,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         {children}
         <Footer />
       </body>
