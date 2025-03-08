@@ -17,10 +17,10 @@ const Header = () => {
       </Link>
       <div className="flex items-center gap-2 max-w-xs justify-between w-full">
         <Link href="/login" className="w-full">
-          <Button bgColor="#181E29" text="Login" />
+          <Button bgColor="#181E29" text="Login" className="w-full" />
         </Link>
         <Link href="/register" className="w-full">
-          <Button bgColor="#144EE3" text="Register Now" />
+          <Button bgColor="#144EE3" text="Register Now" className="w-full" />
         </Link>
       </div>
     </header>

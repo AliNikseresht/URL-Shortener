@@ -3,7 +3,7 @@ import UrlForm from "@/components/ui/UrlForm";
 
 export default function Home() {
   return (
-    <main className="overflow-y-auto h-full">
+    <main className="">
       <RotatingCircles />
       <UrlForm />
     </main>
