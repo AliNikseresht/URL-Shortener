@@ -9,8 +9,9 @@ import { AiOutlineQuestionCircle } from "react-icons/ai";
 import Button from "./Button";
 
 const UrlForm = () => {
-  //hooks
-  const { url, shortUrl, error, setUrl, shortenUrl } = useUrlShortener();
+  // hooks
+  const { url, shortUrl, error, setUrl, shortenUrl, history } =
+    useUrlShortener();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,7 +19,7 @@ const UrlForm = () => {
   };
 
   return (
-    <div className="flex justify-center min-h-screen relative">
+    <div className="flex justify-center min-h-screen relative flex-col items-center">
       <Image
         src={cubeOne}
         alt="cube photo"
@@ -90,6 +91,45 @@ const UrlForm = () => {
         style={{ zIndex: "-1" }}
         className="absolute left-0 rotate-180"
       />
+
+      <div className="mt-10 w-full max-w-4xl">
+        <h3 className="text-lg font-semibold mb-2">Short Links History:</h3>
+        <div className="overflow-x-auto rounded-2xl">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-gray-900 text-[#fff]">
+              <tr>
+                <th className="px-4 py-3">
+                  Original URL
+                </th>
+                <th className="px-4 py-3">Short URL</th>
+                <th className="px-4 py-3">
+                  Created At
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-gray-800 text-[#C9CED6]">
+              {history.map((item, index) => (
+                <tr key={index} className="">
+                  <td className="px-4 py-3 truncate max-w-xs">
+                    {item.original}
+                  </td>
+                  <td className="px-4 py-3">
+                    <a
+                      href={item.short}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#C9CED6] underline"
+                    >
+                      {item.short}
+                    </a>
+                  </td>
+                  <td className="px-4 py-3">{item.created_at}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

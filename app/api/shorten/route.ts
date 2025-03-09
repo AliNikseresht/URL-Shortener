@@ -12,11 +12,12 @@ export async function POST(req: Request) {
 
     // Create a random slug
     const slug = Math.random().toString(36).substring(2, 8);
+    const shortUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/${slug}`;
 
     // Save to database
     const { error } = await supabase
       .from("short_links")
-      .insert([{ slug, original_url: url }]);
+      .insert([{ slug, original_url: url, short_url: shortUrl }]);
     if (error) {
       console.log("Error while inserting into database:", error);
       throw error;
