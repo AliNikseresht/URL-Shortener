@@ -5,8 +5,8 @@ interface HistoryTableProps {
 }
 
 const HistoryTable: React.FC<HistoryTableProps> = ({ history }) => (
-  <div className="mt-10 w-full max-w-4xl">
-    <h3 className="text-lg font-semibold mb-2">Short Links History:</h3>
+  <div className="mt-10 w-full max-w-4xl p-6 md:p-0">
+    <h3 className="md:text-lg font-semibold mb-2">Short Links History:</h3>
     <div className="overflow-x-auto rounded-2xl">
       <table className="w-full text-sm text-left">
         <thead className="bg-gray-900 text-[#fff]">

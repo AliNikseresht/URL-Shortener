@@ -22,7 +22,7 @@ const UrlForm = () => {
 
       <div className="p-6 rounded-lg z-20 flex flex-col items-center">
         <div className="w-full flex flex-col justify-center items-center text-center my-[2em]">
-          <h3 className="text-5xl font-bold bg-gradient-to-r from-[#144EE3] via-[#EB568E] to-[#144EE3] bg-clip-text text-transparent">
+          <h3 className="text-lg md:text-5xl py-4 font-bold bg-gradient-to-r from-[#144EE3] via-[#EB568E] to-[#144EE3] bg-clip-text text-transparent">
             Shorten Your Loooong Links :)
           </h3>
           <span className="text-xs text-[#C9CED6] mt-4">
@@ -38,7 +38,7 @@ const UrlForm = () => {
           <FormInput url={url} setUrl={setUrl} />
           <button
             type="submit"
-            className="w-48 mr-1 py-3 bg-[#144EE3] text-white rounded-4xl hover:bg-[#144fe3b9] cursor-pointer duration-300"
+            className="w-40 text-xs md:text-base md:w-48 mr-1 py-3 bg-[#144EE3] text-[#fff] rounded-4xl hover:bg-[#144fe3b9] cursor-pointer duration-300"
           >
             Shorten Now!
           </button>
