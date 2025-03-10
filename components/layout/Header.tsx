@@ -1,10 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import appLogo from "@/public/assets/logoApp.png";
 import Button from "../ui/Button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+
+  if (pathname === "/login" || pathname === "/register") {
+    return null;
+  }
+
   return (
     <header className="w-full flex justify-between p-4">
       <Link href="/">

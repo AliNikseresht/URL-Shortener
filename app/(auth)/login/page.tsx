@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import AuthForm from "../components/authForm";
 
-const LoginPage = () => {
-  return (
-    <div>LoginPage</div>
-  )
-}
+const Login = () => {
+  return <AuthForm isLogin={true} />;
+};
 
-export default LoginPage
+export default Login;
