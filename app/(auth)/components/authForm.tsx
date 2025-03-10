@@ -72,7 +72,7 @@ export default function AuthForm({ isLogin }: AuthFormProps) {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center p-6 md:p-0">
       <h2 className="text-4xl font-bold bg-gradient-to-r from-[#144EE3] via-[#EB568E] to-[#144EE3] bg-clip-text text-transparent">
         {isLogin ? authForm.title[0] : authForm.title[1]}
       </h2>
@@ -125,7 +125,7 @@ export default function AuthForm({ isLogin }: AuthFormProps) {
           <Link
             key={index}
             href={item.link}
-            className="text-[#C9CED6] font-semibold md:mt-4"
+            className="text-[#C9CED6] font-semibold mt-4"
           >
             {item.title}
           </Link>

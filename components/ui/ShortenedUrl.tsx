@@ -5,13 +5,13 @@ interface ShortenedUrlProps {
 }
 
 const ShortenedUrl: React.FC<ShortenedUrlProps> = ({ shortUrl }) => (
-  <div className="mt-10">
-    <p className="text-[#144EE3]">Shortened URL:</p>
+  <div className="mt-10 w-full">
+    <p className="text-[#144EE3] text-sm md:text-base">Shortened URL:</p>
     <a
       href={shortUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-[#C9CED6] underline text-xl"
+      className="text-[#C9CED6] underline text-xs md:text-xl w-full"
     >
       {shortUrl}
     </a>
